@@ -1,10 +1,20 @@
+var upper= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lower= "abcdefghijklmnopqrstuvwxyz"
+var special= "!@#$%^&*()_+";
+var number=  "123456789";
+
 //generate random password
 
 function generate () {
 
-    let complexity = document.getElementById("slider").value
+    var upperinput= document.getElementById("upper").checked
+    var lowerinput= document.getElementById ("lower").checked
+    var specialinput= document.getElementsById ("special").checked
+    var numberinput= document.getElementById ("number").checked
 
-    let values= "ABCDERFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+    for(var i = 0; i <= complexity; i++){
+        password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+    }
 
-    let password= "";
+    return password;
 }
